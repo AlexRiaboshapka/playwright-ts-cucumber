@@ -1,22 +1,5 @@
 # cucumber-playwright
 
-![Test](https://github.com/Tallyb/cucumber-playwright/workflows/Test/badge.svg)
-
-A starter repo for writing E2E tests based on Cucumber(7) with Playwright using Typescript.
-
-## The Why
-[Read](https://tally-b.medium.com/e2e-testing-with-cucumber-and-playwright-9584d3ef3360) or [watch](https://www.youtube.com/watch?v=PUVFmhYJNJA&list=PLwwCtx3xQxlVMZzS4oi2TafVRngQ1wF_0&index=2). 
-
-## Can we use XXX from playwright in the playwright-cucumber project? 
-
-The playwright-cucumber project started when playwright was a browser automation library. It did not have a test runner, hence cucumber-js was used as the test runner and PW used for the automation.
-Since then PW added their amazing PW test library which is a test runner. But, sadly, it overlaps the functionality provided by cucumber-js. Therefore you need to make the decision now of which runner you want to run: cucumber for BDD style tests or PW test for “normal” tests. 
-Some of the features provided by PW test are also available in cucumber-js, such as parallel run and different configurations (profiles in cucumber-js terms), but may require a different configuration. 
-
-## Kudos
-
-This repository is based on the [Cucumber-typescript-starter](https://github.com/hdorgeval/cucumber7-ts-starter/) repo.
-
 ## What's inside
 
 - Typescript setup for writing steps with eslint/typescript and prettier
@@ -28,10 +11,6 @@ This repository is based on the [Cucumber-typescript-starter](https://github.com
 - Utilies function to help you with writing steps
 - VScode configuration to debug a single feature or an only scenario (run when located on the feature file)
 
-## Usage
-
-Create a repo based on this template and start writing your tests.
-
 ## To run your tests
 
 `npm run test` or `npx cucumber-js` runs all tests
@@ -39,7 +18,7 @@ Create a repo based on this template and start writing your tests.
 
 ## Browser selection
 
-By default we will use chromium. You can define an envrionment variable called BROWSER and
+By default we will use chromium. You can define an environment variable called BROWSER and
 set the name of the browser. Available options: chromium, firefox, webkit
 
 On Linux and Mac you can write:
@@ -52,10 +31,6 @@ One Windows you need to write
 set BROWSER=firefox
 npm run test
 ```
-
-## Working with Page Objects
-
-I am not fond of the Page Object Model (POM) for testing. It feels like a leftover from Java world, and I do not think it fits the Javascript world. However, you can check [this PR](https://github.com/Tallyb/cucumber-playwright/pull/95/files) to see POM implementation. 
 
 ## Debugging Features
 
@@ -83,7 +58,6 @@ The last reporter/formatter found on the cucumber-js command-line wins:
 
 In [cucumber.mjs](cucumber.mjs) file, modify the options.
 
-
 To use Allure reporting, you can run with env param: `USE_ALLURE=1`, and then use the `npm run allure` to show the report.
 
 ## To ignore a scenario
@@ -107,5 +81,5 @@ To use Allure reporting, you can run with env param: `USE_ALLURE=1`, and then us
 - Modify the `package.json` in `"report": "xdg-open reports/report.html"`
 
 ## To view allure report
-- run the command `npm run allure`.
 
+- run the command `npm run allure`.
